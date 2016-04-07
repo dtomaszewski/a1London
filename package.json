@@ -1,0 +1,23 @@
+{
+  "name": "a1london",
+  "version": "0.0.1",
+  "description": "London map using Transport For London Unified API",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dtomaszewski/a1London.git"
+  },
+  "keywords": [
+    "london",
+    "transport"
+  ],
+  "author": "dtomaszewski.js@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dtomaszewski/a1London/issues"
+  },
+  "homepage": "https://github.com/dtomaszewski/a1London#readme"
+}
