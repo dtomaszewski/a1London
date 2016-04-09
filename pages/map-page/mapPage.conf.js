@@ -3,6 +3,8 @@ angular.module('map-page')
     .config(($stateProvider) => {
         $stateProvider.state('map', {
             url: '/map',
-            templateUrl: 'pages/map-page/map-page.tmpl.html'
+            templateUrl: 'pages/map-page/map-page.tmpl.html',
+            controller: 'MapPageCtrl',
+            controllerAs: 'mapPageCtrl'
         });
     });

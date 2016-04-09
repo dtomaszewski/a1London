@@ -1,2 +1,2 @@
 'use strict';
-angular.module('map-page', ['uiGmapgoogle-maps']);
+angular.module('map-page', ['uiGmapgoogle-maps', 'london-transport']);
