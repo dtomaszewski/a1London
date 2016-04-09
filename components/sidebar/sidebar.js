@@ -1,7 +1,7 @@
 'use strict';
 /* eslint no-param-reassign: ["error", { "props": false }] */
 angular.module('sidebar', [])
-    .directive('sidebar', () => {
+    .directive('sidebar', (BikePoints) => {
         const directive = {
             restrict: 'E',
             templateUrl: 'components/sidebar/sidebar.tmpl.html',
@@ -16,16 +16,8 @@ angular.module('sidebar', [])
         function link(scope) {
             scope.buttonPrefix = 'Show';
 
-            scope.buttonAction = function(type) {
-                const actionPromise = scope.action(type);
-
-                if (actionPromise) {
-                    actionPromise.then(() => {
-                        scope.buttonPrefix = 'Hide';
-                    });
-                } else {
-                    scope.buttonPrefix = 'Show';
-                }
+            scope.setBikePoints = function() {
+                BikePoints.toggle();
             };
         }
     });
