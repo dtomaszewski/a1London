@@ -4,14 +4,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>London Transport</title>
+    <link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
     <link rel="stylesheet" href="app.css"/>
 </head>
 <body data-ng-app="LondonApp">
 
-<div ui-view></div>
+<div class="u-maxHeight" ui-view></div>
 
 <!--VENDOR-->
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+<script src="node_modules/angular/angular.js"></script>
+<script src="node_modules/angular-aria/angular-aria.js"></script>
+<script src="node_modules/angular-animate/angular-animate.js"></script>
+<script src="node_modules/angular-material/angular-material.js"></script>
 <script src='node_modules/lodash/lodash.js'></script>
 <script src='node_modules/angular-google-maps/node_modules/angular-simple-logger/dist/angular-simple-logger.js'></script>
 <script src='node_modules/angular-google-maps/dist/angular-google-maps.js'></script>
@@ -25,5 +29,6 @@
 <script src="tmp/map-page/mapPage.conf.js"></script>
 <script src="tmp/map-page/mapPageCtrl.js"></script>
 <script src="tmp/london-transport/LondonTransport.js"></script>
+<script src="tmp/map/map.js"></script>
 </body>
 </html>

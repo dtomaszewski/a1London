@@ -1,3 +1,14 @@
-<ui-gmap-google-map center='{ latitude: 51.529163, longitude: -0.10997 }' zoom='16'>
-    <ui-gmap-markers models="mapPageCtrl.bikePoints" coords="'self'" icon="'icon'"></ui-gmap-markers>
-</ui-gmap-google-map>
+<section layout="row" flex="" class="u-maxHeight">
+
+    <md-sidenav layout-column class="md-sidenav-left " id="siteMenu" md-component-id=" left" md-is-locked-open="$mdMedia('gt-sm')">
+        <md-content layout-fill role="navigation">
+            <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="">
+                <md-button class="md-raised md-primary">Primary</md-button>
+            </section>
+        </md-content>
+    </md-sidenav>
+
+    <md-content layout="column" class="content-wrapper md-padding" flex layout-column id="content">
+        <map markers="mapPageCtrl.bikePoints"></map>
+    </md-content>
+</section>
