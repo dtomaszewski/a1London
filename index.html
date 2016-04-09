@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>London Transport</title>
+    <link rel="stylesheet" href="app.css"/>
+</head>
+<body data-ng-app="LondonApp">
+
+<div ui-view></div>
+
+<!--VENDOR-->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+<script src='node_modules/angular-google-maps/node_modules/lodash/lodash.js'></script>
+<script src='node_modules/angular-google-maps/node_modules/angular-simple-logger/dist/angular-simple-logger.js'></script>
+<script src='node_modules/angular-google-maps/dist/angular-google-maps.js'></script>
+<script src='node_modules/angular-ui-router/release/angular-ui-router.js'></script>
+
+<!--LOCAL-->
+<script src="app.js"></script>
+<script src="app.conf.js"></script>
+<script src="pages/map-page/mapPage.js"></script>
+<script src="pages/map-page/mapPage.conf.js"></script>
+</body>
+</html>
