@@ -5,5 +5,6 @@ angular.module('map-page',
         'london-transport',
         'map', 'sidebar',
         'bike-points',
-        'cycle-highways'
+        'cycle-highways',
+        'line'
     ]);

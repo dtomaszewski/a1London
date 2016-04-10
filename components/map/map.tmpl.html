@@ -1,5 +1,7 @@
 <ui-gmap-google-map  class="Map" layout-fill center='{ latitude: 51.529163, longitude: -0.10997 }' zoom='16'>
-    <ui-gmap-markers models="markers" coords="'self'" icon="'icon'"></ui-gmap-markers>
+    <div data-ng-repeat="markerGroup in markers">
+        <ui-gmap-markers models="markerGroup" coords="'self'" icon="'icon'"></ui-gmap-markers>
+    </div>
 
     <div data-ng-repeat="path in paths">
         <ui-gmap-polyline path="path" coords="'self'"></ui-gmap-polyline>
