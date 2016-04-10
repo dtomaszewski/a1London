@@ -1,8 +1,9 @@
 'use strict';
 class MapPageCtrl {
-    constructor(BikePoints) {
+    constructor(BikePoints, CycleHighways) {
         const vm = this;
         vm.bikePoitns = BikePoints.all;
+        vm.cycleHighways = CycleHighways.all;
     }
 }
 

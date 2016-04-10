@@ -4,7 +4,8 @@ angular.module('map', []).directive('map', () => {
         restrict: 'E',
         templateUrl: 'components/map/map.tmpl.html',
         scope: {
-            markers: '='
+            markers: '=',
+            markers2: '='
         }
     };
     return directive;

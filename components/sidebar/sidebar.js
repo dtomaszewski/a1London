@@ -1,7 +1,7 @@
 'use strict';
 /* eslint no-param-reassign: ["error", { "props": false }] */
 angular.module('sidebar', [])
-    .directive('sidebar', (BikePoints) => {
+    .directive('sidebar', (BikePoints, CycleHighways) => {
         const directive = {
             restrict: 'E',
             templateUrl: 'components/sidebar/sidebar.tmpl.html',
@@ -30,6 +30,10 @@ angular.module('sidebar', [])
                 } else {
                     scope.buttonText = 'Show Bike points';
                 }
+            };
+
+            scope.toggleCycleHighways = function() {
+                CycleHighways.toggle();
             };
         }
     });
