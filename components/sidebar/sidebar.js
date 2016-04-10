@@ -14,10 +14,22 @@ angular.module('sidebar', [])
         return directive;
 
         function link(scope) {
-            scope.buttonPrefix = 'Show';
+            scope.buttonText = 'Show Bike points';
+            scope.buttonDisabled = false;
+            let bikePointsState;
 
-            scope.setBikePoints = function() {
-                BikePoints.toggle();
+            scope.toggleBikePoints = function() {
+                bikePointsState = BikePoints.toggle();
+                if (bikePointsState) {
+                    scope.buttonText = 'Collecting data';
+                    scope.buttonDisabled = true;
+                    bikePointsState.then(() => {
+                        scope.buttonText = 'Hide Bike points';
+                        scope.buttonDisabled = false;
+                    });
+                } else {
+                    scope.buttonText = 'Show Bike points';
+                }
             };
         }
     });

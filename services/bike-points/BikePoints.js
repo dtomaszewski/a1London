@@ -7,7 +7,7 @@ angular.module('bike-points', ['restangular'])
             if (all.length > 0) {
                 all.splice(0, all.length);
             } else {
-                LondonTransport.all('BikePoint').getList().then((results) => {
+                return LondonTransport.all('BikePoint').getList().then((results) => {
                     results.forEach((result) => {
                         all.push({
                             id: result.id,
@@ -17,6 +17,7 @@ angular.module('bike-points', ['restangular'])
                     });
                 });
             }
+            return false;
         }
 
         return {
