@@ -1,6 +1,6 @@
 'use strict';
 /* eslint no-param-reassign: ["error", { "props": false }] */
-angular.module('sidebar', [])
+angular.module('sidebar', ['sidebar-button'])
     .directive('sidebar', (BikePoints, CycleHighways) => {
         const directive = {
             restrict: 'E',
@@ -16,6 +16,10 @@ angular.module('sidebar', [])
         function link(scope) {
             scope.buttonText = 'Show Bike points';
             scope.buttonDisabled = false;
+
+            scope.bikePointsService = BikePoints;
+            scope.cycleHighwaysService = CycleHighways;
+
             let bikePointsState;
 
             scope.toggleBikePoints = function() {
@@ -32,8 +36,22 @@ angular.module('sidebar', [])
                 }
             };
 
+            scope.button2Text = 'Show Cycle Highways';
+            scope.button2Disabled = false;
+            let cycleHighwaysState;
             scope.toggleCycleHighways = function() {
-                CycleHighways.toggle();
+                cycleHighwaysState = CycleHighways.toggle();
+                if (cycleHighwaysState) {
+                    scope.button2Text = 'Collecting data';
+                    scope.button2Disabled = true;
+
+                    cycleHighwaysState.then(() => {
+                        scope.button2Text = 'Hide Cycle Highways';
+                        scope.button2Disabled = false;
+                    });
+                } else {
+                    scope.button2Text = 'Show Cycle Highways';
+                }
             };
         }
     });

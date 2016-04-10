@@ -5,7 +5,7 @@ angular.module('map', []).directive('map', () => {
         templateUrl: 'components/map/map.tmpl.html',
         scope: {
             markers: '=',
-            markers2: '='
+            paths: '='
         }
     };
     return directive;

@@ -1,11 +1,4 @@
 <section class="Sidebar" layout="row" layout-sm="column" layout-align="center center" layout-wrap="">
-    <md-button
-            class="md-raised md-primary Sidebar-button"
-            ng-click="toggleBikePoints()"
-            ng-disabled="buttonDisabled">{{buttonText}}</md-button>
-
-    <md-button
-            class="md-raised md-primary Sidebar-button"
-            ng-click="toggleCycleHighways()"
-            ng-disabled="buttonDisabled">{{buttonText}}</md-button>
+    <sidebar-button service="bikePointsService" show-text="Show Bike points" hide-text="Hide Bike points"></sidebar-button>
+    <sidebar-button service="cycleHighwaysService" show-text="Show Cycle highways" hide-text="Hide Cycle highways"></sidebar-button>
 </section>

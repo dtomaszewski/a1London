@@ -10,7 +10,7 @@ angular.module('cycle-highways', ['restangular'])
                 return LondonTransport.all('CycleSuperhighway').getList().then((results) => {
                     let id = 0;
                     results.forEach((result) => {
-                        let coordsData = [];
+                        const coordsData = [];
                         result.geography.coordinates.forEach((coords) => {
                             coordsData.push({
                                 id: id++,
