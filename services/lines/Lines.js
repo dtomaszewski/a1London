@@ -12,7 +12,8 @@ angular.module('line', ['restangular'])
                         all.push({
                             id: result.id,
                             latitude: result.lat,
-                            longitude: result.lon
+                            longitude: result.lon,
+                            icon: 'assets/bus.png'
                         });
                     });
 

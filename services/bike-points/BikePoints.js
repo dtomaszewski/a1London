@@ -12,7 +12,8 @@ angular.module('bike-points', ['restangular'])
                         all.push({
                             id: result.id,
                             latitude: result.lat,
-                            longitude: result.lon
+                            longitude: result.lon,
+                            icon: 'assets/bike.png'
                         });
                     });
                 });
