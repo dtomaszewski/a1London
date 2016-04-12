@@ -6,7 +6,15 @@ angular.module('map', []).directive('map', () => {
         scope: {
             markers: '=',
             paths: '='
-        }
+        },
+        link
     };
     return directive;
+
+    function link(scope) {
+        scope.stroke = {
+            color: '#d86208',
+            weight: 3
+        };
+    }
 });
