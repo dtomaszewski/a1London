@@ -18,8 +18,10 @@ angular.module('sidebar-button')
         return directive;
 
         function link(scope) {
+            let buttonState;
+
             scope.buttonAction = function(modelData) {
-                scope.service[scope.method](modelData);
+                buttonState = scope.service[scope.method](modelData);
             };
         }
     });
