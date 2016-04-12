@@ -14,15 +14,8 @@ angular.module('sidebar', ['sidebar-button'])
         return directive;
 
         function link(scope) {
-            scope.buttonText = 'Show Bike points';
-            scope.buttonDisabled = false;
-
             scope.bikePointsService = BikePoints;
             scope.cycleHighwaysService = CycleHighways;
             scope.linesService = Lines;
-
-            scope.toggleStops = function(line) {
-                Lines.toggleStops(line);
-            }
         }
     });

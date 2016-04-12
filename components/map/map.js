@@ -6,12 +6,7 @@ angular.module('map', []).directive('map', () => {
         scope: {
             markers: '=',
             paths: '='
-        },
-        link
+        }
     };
     return directive;
-    
-    function link(scope) {
-        console.log('scope.markers ', scope.markers);
-    }
 });

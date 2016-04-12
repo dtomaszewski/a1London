@@ -1,10 +1,14 @@
 <section layout="row" flex="" class="u-maxHeight">
 
-    <md-sidenav layout-column class="md-sidenav-left " id="siteMenu" md-component-id=" left" md-is-locked-open="$mdMedia('gt-sm')">
+    <md-sidenav layout-column class="md-sidenav-left " md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
         <md-content layout-fill role="navigation">
             <sidebar action="mapPageCtrl.sidebarAction({type: type})"></sidebar>
         </md-content>
     </md-sidenav>
+
+    <md-button class="md-fab md-primary md-button md-ink-ripple MapPage-sidebarButton" ng-click="mapPageCtrl.openSidebar()">
+        <md-icon md-svg-src="assets/menu.svg"></md-icon>
+    </md-button>
 
     <md-content layout="column" class="content-wrapper md-padding" flex layout-column id="content">
         <map markers="mapPageCtrl.markers" paths="mapPageCtrl.cycleHighways"></map>

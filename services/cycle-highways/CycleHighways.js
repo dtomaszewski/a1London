@@ -11,7 +11,7 @@ angular.module('cycle-highways', ['restangular'])
                     let id = 0;
                     results.forEach((result) => {
                         const coordsData = [];
-                        for (let i = 0; i < result.geography.coordinates.length; i += 3) {
+                        for (let i = 0; i < result.geography.coordinates.length; i += 5) {
                             coordsData.push({
                                 id: id++,
                                 latitude: result.geography.coordinates[i][1],
