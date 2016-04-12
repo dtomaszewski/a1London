@@ -11,13 +11,13 @@ angular.module('cycle-highways', ['restangular'])
                     let id = 0;
                     results.forEach((result) => {
                         const coordsData = [];
-                        result.geography.coordinates.forEach((coords) => {
+                        for (let i = 0; i < result.geography.coordinates.length; i += 3) {
                             coordsData.push({
                                 id: id++,
-                                latitude: coords[1],
-                                longitude: coords[0]
+                                latitude: result.geography.coordinates[i][1],
+                                longitude: result.geography.coordinates[i][0]
                             });
-                        });
+                        }
                         all.push(coordsData);
                     });
                 });
